@@ -1,0 +1,56 @@
+#N canvas -18 25 800 521 10;
+#X obj 56 234 dac~;
+#X obj 59 195 *~;
+#X obj 60 133 readsf~;
+#X obj 90 170 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 8700 1;
+#X msg 180 94 open LetMeLoveYou.aiff;
+#X msg 22 102 start;
+#X msg 19 126 stop;
+#X obj 96 107 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 67 14 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 67 44 openpanel;
+#X msg 67 72 open \$1;
+#N canvas 0 22 450 278 (subpatch) 0;
+#X array sample 7.78867e+06 float 2;
+#X coords 0 1 7.78867e+06 -1 200 140 1;
+#X restore 574 75 graph;
+#X obj 425 29 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 425 53 openpanel;
+#X msg 424 85 read -resize \$1 sample;
+#X obj 422 117 soundfiler;
+#X obj 421 197 tabplay~ sample;
+#X obj 427 336 dac~;
+#X obj 430 297 *~;
+#X obj 461 272 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 500 1;
+#X obj 378 155 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 432 171 stop;
+#X floatatom 426 150 20 0 0 0 - - -;
+#X text 121 15 sample desde disco duro;
+#X text 470 14 semple desde memoria con tabplay;
+#X connect 1 0 0 0;
+#X connect 1 0 0 1;
+#X connect 2 0 1 0;
+#X connect 3 0 1 1;
+#X connect 4 0 2 0;
+#X connect 5 0 2 0;
+#X connect 6 0 2 0;
+#X connect 7 0 2 0;
+#X connect 8 0 9 0;
+#X connect 9 0 10 0;
+#X connect 10 0 2 0;
+#X connect 12 0 13 0;
+#X connect 13 0 14 0;
+#X connect 14 0 15 0;
+#X connect 15 0 22 0;
+#X connect 16 0 18 0;
+#X connect 18 0 17 0;
+#X connect 18 0 17 1;
+#X connect 19 0 18 1;
+#X connect 20 0 16 0;
+#X connect 21 0 16 0;
