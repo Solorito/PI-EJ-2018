@@ -1,5 +1,7 @@
 David: Jaap Blonk y Ryoji Ikeda
+
 Octavio: Luigi Russolo y Reed Ghazala
+
 Jorge: Steve Reich y Pierre Schaeffer
 Hector: Jeff Carey y Dj Shadow
 Roy: Autrechre y Pauline Oliveros
